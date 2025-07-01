@@ -19,13 +19,13 @@ Comment je me suis positionné dans mon binôme ? Qu’est-ce que j’ai apport�
 Day 2
 
 Qu’est-ce que j’ai compris aujourd’hui ?
-    Pleins de nouvelles choses, syntaxes, les states.  
+    Pleins de nouvelles choses, syntaxes, les states, les props, beaucoup de tailwind.
 
 Sur quoi je me suis senti à l’aise ? Sur quoi j’ai bloqué ?
-    Pas de difficulté particulière, pas spécialement à l'aise non plus.
+    Pas de difficulté particulière, pas spécialement à l'aise non plus. Je commence à m'habituer à Tailwind
 
 À quel moment j’ai appris quelque chose d’important ?
-    Tout au long de la journée :)
+    Tout au long de la journée :) 
 
 Qu’est-ce que j’aimerais revoir demain pour mieux ancrer ce que j’ai vu aujourd’hui ?
-    Plus de tailwind, plus de code !
+    Plus de tailwind, plus de code, et mieux comprendre les cas d'usage de children, j'image que c'est pertinent pour les layouts.

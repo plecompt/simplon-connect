@@ -1,17 +1,22 @@
+import Badge from './Badge';
+import {useState} from 'react';
+
 function MemberCard({member}) {
+  const [toggleBadge, setToggleBadge] = useState(false);
+
+  const handleClick = () => {
+    setToggleBadge(!toggleBadge);
+  };
+
   return (
-    <div className="-wbghite p-6 rounded-lg shadow-md border border-gray-200">
+    <div className="-wbghite p-6 rounded-lg shadow-md bg-white border-white" onClick={handleClick}>
       <img className="mx-auto block w-24 h-24 rounded-full object-cover mb-4" src={member.imageUrl} alt={"Image de profil de " + member.firstName} />
 
       <h3 className="text-xl font-bold text-gray-800 mb-2">
         {member.firstName} {member.lastName}
       </h3>
       
-      <div className="mb-3">
-        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-          {member.tech}
-        </span>
-      </div>
+      <Badge toggleBadge = {toggleBadge} tech = {member.tech}/>
       
       <p className="text-gray-600 italic">
         "{member.message}"
