@@ -1,0 +1,31 @@
+Day 1
+
+Qu’est-ce que j’ai réellement compris aujourd’hui ?
+    Le virtualDOM car le DOM réel est super lent
+    Tailwin c'est bien !
+    En React, on parle de props plutot que des arguments
+Qu’est-ce qui me semble encore flou ou fragile ?
+    L'état est un instantané, react utilise comme des snapshots et il faut gerer l'update des variables.
+Quel moment de la journée m’a apporté une vraie satisfaction ?
+    Toutes les 3 secondes quand mon ventilateur me ventille, mais en realité, on a appris beaucoup de choses et c'était très interessant.
+Qu’est-ce que je veux absolument consolider demain ?
+    L'état est un instantané et Tailwind
+Est-ce que j’ai osé chercher, tester, casser du code ?
+    Oui, j'ai osé
+Comment je me suis positionné dans mon binôme ? Qu’est-ce que j’ai apporté ?
+    J'étais là. J'ai apporté ma personne ❤️
+
+
+Day 2
+
+Qu’est-ce que j’ai compris aujourd’hui ?
+    Pleins de nouvelles choses, syntaxes, les states.  
+
+Sur quoi je me suis senti à l’aise ? Sur quoi j’ai bloqué ?
+    Pas de difficulté particulière, pas spécialement à l'aise non plus.
+
+À quel moment j’ai appris quelque chose d’important ?
+    Tout au long de la journée :)
+
+Qu’est-ce que j’aimerais revoir demain pour mieux ancrer ce que j’ai vu aujourd’hui ?
+    Plus de tailwind, plus de code !
