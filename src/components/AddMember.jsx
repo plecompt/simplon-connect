@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function AddMember({addedMember, setAddedMember}) {
+function AddMember() {
   //States for every inputs
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -38,7 +38,8 @@ function AddMember({addedMember, setAddedMember}) {
     setImageUrl('');
     setMessage('');
 
-    setAddedMember(1);
+    //emitting CustomEvent
+    window.dispatchEvent(new CustomEvent('memberAdded'));
   };
 
   return (

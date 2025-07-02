@@ -1,4 +1,4 @@
-export const members = [
+export const defaultMembers = [
   {
     firstName: "Inès",
     lastName: "Dupont",

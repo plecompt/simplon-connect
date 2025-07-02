@@ -29,3 +29,19 @@ Sur quoi je me suis senti à l’aise ? Sur quoi j’ai bloqué ?
 
 Qu’est-ce que j’aimerais revoir demain pour mieux ancrer ce que j’ai vu aujourd’hui ?
     Plus de tailwind, plus de code, et mieux comprendre les cas d'usage de children, j'image que c'est pertinent pour les layouts.
+
+
+Day 3
+
+Est-ce que j’ai réussi à rendre mon interface interactive ?
+    Oui j'ai reussi
+
+Qu’est-ce que j’ai compris dans le fonctionnement de useState ?
+    C'est le getter/setter de React qui permet le render.
+    Modifier la valeur ne suffit pas à trigger le render (les methodes comme push, sort, etc) ce qui implique de creer des nouvelles variables (changement de pointeur)
+
+Quelles difficultés ai-je rencontrées ? Comment les ai-je contournées/surmontées ?
+    Difficultés à remonter des infos d'un enfant à un parent, nous avons lu de la doc et resolu ca en pair-coding
+    
+Est-ce que mon code est clair pour quelqu’un d’autre que moi ?
+    J'espere que oui ...  clair pour moi en tout cas et commenté.

@@ -1,11 +1,24 @@
-import { members } from '../data/members';
+import { useEffect } from 'react';
+import { defaultMembers } from '../data/members';
 
 function DataLoader() {
-  const existingMembers = localStorage.getItem('members');
+  useEffect(() => {
+    if (!localStorage.getItem('members')) {
+      localStorage.setItem('members', JSON.stringify(defaultMembers));
 
-  if (!existingMembers) {
-    localStorage.setItem('members', JSON.stringify(members));
-  }
+      window.dispatchEvent(new CustomEvent('dataLoaded', {
+        detail: { members: defaultMembers }
+      }));
+    } else {
+      const existingMembers = JSON.parse(localStorage.getItem('members'));
+      window.dispatchEvent(new CustomEvent('dataLoaded', {
+        detail: { members: existingMembers }
+      }));
+    }
+  }, []);
+
+  return null;
 }
+
 
 export default DataLoader;
