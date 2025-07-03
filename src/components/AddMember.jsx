@@ -39,7 +39,7 @@ function AddMember() {
     setMessage('');
 
     //emitting CustomEvent
-    window.dispatchEvent(new CustomEvent('memberAdded'));
+    window.dispatchEvent(new CustomEvent('membersUpdated'));
   };
 
   return (
@@ -57,7 +57,7 @@ function AddMember() {
 
         <textarea rows="3" placeholder="Message personnel (optionnel)" className="w-full p-2 border rounded" value={message} onChange={(e) => setMessage(e.target.value)} />
 
-        <button className="w-full bg-white text-black py-2 rounded" type="submit">Ajouter le membre</button>
+        <button className="w-full bg-white hover:bg-gray-100 text-black py-2 rounded cursor-pointer" type="submit">Ajouter le membre</button>
       </form>
     </div>
   );
