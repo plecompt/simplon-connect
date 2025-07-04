@@ -4,12 +4,12 @@ import { useEffect } from 'react';
 
 function SearchBar() {
   const [deleteMode, setDeleteMode] = useState(localStorage.getItem('deleteMode') === 'true');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState(localStorage.getItem('searchTerm') || '');
   const [filterBy, setFilterBy] = useState('all');
 
   const toggleDeleteMode = () => {
-    localStorage.setItem('deleteMode', localStorage.getItem('deleteMode') !== 'true');
-    setDeleteMode(localStorage.getItem('deleteMode'));
+    localStorage.setItem('deleteMode', (!deleteMode).toString());
+    setDeleteMode(!deleteMode);
   }
 
   const resetMembers = () => {
@@ -50,8 +50,10 @@ function SearchBar() {
     if (localStorage.getItem('members')) {
       if (searchTerm !== '') {
         localStorage.setItem('filtered', 'true');
+        localStorage.setItem('searchTerm', searchTerm);
       } else {
         localStorage.setItem('filtered', 'false');
+        localStorage.setItem('searchTerm', '');
       }
       
       const members = JSON.parse(localStorage.getItem('members'));
@@ -61,6 +63,8 @@ function SearchBar() {
       window.dispatchEvent(new CustomEvent('membersUpdated'));
     }
   }, [searchTerm, filterBy]);
+
+
 
   return (
     <div className="bg-gray-300 w-full">
@@ -90,7 +94,7 @@ function SearchBar() {
               <button 
                 onClick={toggleDeleteMode} 
                 className={`p-2 rounded-sm cursor-pointer transition-colors duration-200 hover:bg-red-200
-                  ${deleteMode === 'true' ? 'bg-red-500' : 'bg-red-100'}
+                  ${deleteMode ? 'bg-red-500' : 'bg-red-100'}
                 `}
               >
                 Mode suppression

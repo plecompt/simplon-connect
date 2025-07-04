@@ -18,19 +18,21 @@ function MemberCard({member}) {
   };
 
   const deleteMember = (e) => {
-    //Click can't execute other method
-    e.stopPropagation();
+    if (confirm('Êtes-vous sur de vouloir supprimer ce membre ?')){
+      //Click can't execute other method
+      e.stopPropagation();
 
-    //getting members
-    let existingMembers = JSON.parse(localStorage.getItem('members')) || [];
+      //getting members
+      let existingMembers = JSON.parse(localStorage.getItem('members')) || [];
 
-    //deleting using name and lastname
-    const updatedMembers = existingMembers.filter(m => m.firstName !== member.firstName && m.lastName !== member.lastName);
-    
-    localStorage.setItem('members', JSON.stringify(updatedMembers));
+      //deleting using name and lastname
+      const updatedMembers = existingMembers.filter(m => m.firstName !== member.firstName && m.lastName !== member.lastName);
+      
+      localStorage.setItem('members', JSON.stringify(updatedMembers));
 
-    //sending custom event to membersGrid
-    window.dispatchEvent(new CustomEvent('membersUpdated'));
+      //sending custom event to membersGrid
+      window.dispatchEvent(new CustomEvent('membersUpdated'));
+    }
   };
 
   return (
